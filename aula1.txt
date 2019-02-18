@@ -38,8 +38,31 @@ Javascript-------------
         dinamismo
         funções
 
+1.Localiza
+2.Evento
+3.Função
+
 
 Editor de texto------
     vscode
     para html usar o pluggin Emmet
 
+
+SVG--imagens vetoriais onde não perde resolução
+
+
+
+essa tag configura a visualização para outros dispositivos como telefone <meta name="viewport" content="width=device.width">
+
+
+innerText mostra so texto
+string.trim() retira espaços no inicio e no final
+textContent mostra tudo dentro
+
+
+classlist possui comandos de listas
+
+toggle alterna
+
+
+"!important"(sem aspas) no css garante que aquele estilo tem prioridade máxima
