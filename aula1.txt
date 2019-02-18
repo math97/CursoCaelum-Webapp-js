@@ -2,7 +2,7 @@
     front-end:interface(client server)
     back-end:trabalha com servidor e a linguagem que executa as resquests
 
-HTML------
+HTML------HyperText Markup Language
     arquivos HTML são "documentos"
         -notação tag/elemento: <nome></nome>
     semântica-html adiciona semântica ao informação.Define o que é os dados,textos.
@@ -13,8 +13,33 @@ HTML------
         semântica
         estrutura
 
-CSS-------
+CSS-------Cascading stylesheet
+    declara estilos
+    css busca elemento e formata
+
+    notações:
+        chama no html usando tag link: <link href="" rel="stylesheet">
+        pode chamar no arquivo css pelos seguintes seletores:
+            notação principal: seletor{propriedades:valor}
+            diretamente a tag:
+                h1{formatações aqui}
+            por ID:
+                #nomedoide{formatações aqui}
+            por CLASS:
+                .nomedaclasse{formatações aqui}
+            ponto e virgula(;) separa os dados dentro das chaves{};        
+    funções:
+        estiliza
+        animações
+
+Javascript-------------
+
+    funções:
+        dinamismo
+        funções
+
 
 Editor de texto------
     vscode
     para html usar o pluggin Emmet
+
