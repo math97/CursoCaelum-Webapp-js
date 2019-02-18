@@ -1,0 +1,20 @@
+1-introdução com explicação da WEB
+    front-end:interface(client server)
+    back-end:trabalha com servidor e a linguagem que executa as resquests
+
+HTML------
+    arquivos HTML são "documentos"
+        -notação tag/elemento: <nome></nome>
+    semântica-html adiciona semântica ao informação.Define o que é os dados,textos.
+
+    head-tem os metadados
+    body-corpo
+    funções:
+        semântica
+        estrutura
+
+CSS-------
+
+Editor de texto------
+    vscode
+    para html usar o pluggin Emmet
