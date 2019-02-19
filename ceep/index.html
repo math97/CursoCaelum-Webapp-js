@@ -41,10 +41,11 @@
     </header>
 
     <form class="formNovoCartao container no-js">
-      <textarea class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>
+      <textarea required class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>
       <input class="formNovoCartao-salvar" type="submit" value="Salvar">
+      <h3 id="resposta"></h3>
     </form>
-
+    
     <section class="container mural" style="font-size: 1.3rem;">
  
       <article id="cartao_1" class="cartao" tabindex="0">
@@ -139,6 +140,7 @@
   <!-- <script src="js/opcoesDoCartao/remove.js"></script> 
     não vai mais ser utilizado porque a função passou para o arquivo cartao.js
   -->
+  <script src="js/formNovoCartao.js"></script>
   <script src="js/opcoesDoCartao/cartao.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
