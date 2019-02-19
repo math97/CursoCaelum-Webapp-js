@@ -12,7 +12,19 @@ bntTrash.addEventListener('click',()=>{
     })
 }) */
 
-(function(){
-    const btn = document.querySelector('.opcoesDoCartao-remove')
-    console.log(btn)
+;(function(){
+    const btns = document.querySelectorAll('.opcoesDoCartao-remove')
+
+    for (let i = 0; i < btns.length; i++) {
+
+        btns[i].addEventListener('click',()=>{
+            const cartao = btns[i].parentNode.parentNode;
+            cartao.classList.add("cartao--some");
+            cartao.addEventListener("transitionend",function(){
+                this.remove()
+            })
+        })
+    }
+
 })()
+
