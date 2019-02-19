@@ -2,6 +2,7 @@
 
 listaCartoes=document.querySelectorAll('.cartao');
 
+
 listaCartoes.forEach(cartao => {
     /**Verifica se entrou em focus.Nesse caso Focusin e focosout "borbulha" para os pais*/
 
@@ -29,10 +30,25 @@ listaCartoes.forEach(cartao => {
         }
     })
 
-    cartao.addEventListener("keydown",function deixaClicarComEnter(event){
+    cartao.addEventListener("keyup",function deixaClicarComEnter(event){
+        
         if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key==='Enter' || event.key==='')){
             event.target.click()
+            console.log(event.target)
         }
+    })
+
+    cartao.addEventListener('click',(evento)=>{
+
+      console.log(evento) 
+      isTrash=evento.target.classList.contains('opcoesDoCartao-remove')
+      if(isTrash){
+          cartao.classList.add("cartao--some");
+          cartao.addEventListener("transitionend",function(){
+              this.remove()
+          })
+      }
+    
     })
     
 });
