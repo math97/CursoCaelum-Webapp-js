@@ -10,6 +10,7 @@
         const textarea = form.querySelector('.formNovoCartao-conteudo');
         const value = textarea.value.trim();
         const isTextAreaVazio = value == "";
+        let objetoCartao={conteudo:value,cor:'yellow'}
 
         if (isTextAreaVazio) {
 
@@ -23,7 +24,7 @@
 
             })
         } else {
-            const cartao = criarCartao(value);
+            const cartao = criarCartao(objetoCartao);
             form.reset();
             cartao.focus();
             

@@ -1,7 +1,7 @@
 let cartoes = document.querySelectorAll('.cartao')
 let contador = cartoes.length;
 
-function criarCartao(valor) {
+function criarCartao(objetoCartao) {
 
     contador++;
 
@@ -9,6 +9,8 @@ function criarCartao(valor) {
     cartao.classList.add('cartao');
     cartao.tabIndex = 0;
     cartao.id = `cartao_${contador}`;
+
+    cartao.style.backgroundColor = objetoCartao.cor;
 
     cartao.innerHTML = ` <div class="opcoesDoCartao">
             <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
@@ -35,7 +37,7 @@ function criarCartao(valor) {
               Inspiração
             </label>
           </div>
-          <p class="cartao-conteudo" contenteditable tabindex="0">${valor}</p>`;
+          <p class="cartao-conteudo" contenteditable tabindex="0">${objetoCartao.conteudo}</p>`;
 
     cartao.addEventListener('focusin', (evento) => {
 
