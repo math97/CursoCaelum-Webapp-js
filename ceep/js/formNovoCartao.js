@@ -7,24 +7,39 @@
         event.preventDefault();
 
 
-        let textarea= form.querySelector('[name=formNovoCartao-conteudo]');
-        textarea=textarea.value.trim();
-        let isTextAreaVazio=textarea.nodeValue=='';
-        const titulo= document.createElement('h3')
+        const textarea= form.querySelector('.formNovoCartao-conteudo');
+        const value=textarea.value.trim();
+        const isTextAreaVazio=value=="";
+
+        
 
         if(isTextAreaVazio){
-            console.log('preencha algo')
-            textarea.placeholder = "Preencha algo"
-            titulo.textContent="Preencha algo"
+            //cria elemento e adiciona classe
+            const msgErroEl= document.createElement('h3')
+            msgErroEl.classList.add('formNovoCartao-msg')
+
+            //passa um valor e insere elemento no html
+            msgErroEl.textContent="Preencha algo"
+            textarea.insertAdjacentElement('afterend',msgErroEl)  
+
+            msgErroEl.addEventListener('animationend',function(){
+                this.remove()
+            })
         }else{
-            console.log(textarea.value)
+
+            const cartao = document.createElement('article');
+            cartao.classList.add('.cartao')
+            cartao.textContent=value
             
-            titulo.textContent=textarea.value
+            document.querySelector('.mural').insertAdjacentElement('beforeend',cartao)  
 
+
+              
         }
-        form.insertAdjacentElement('beforeend',titulo)
+        
+        
 
-        console.log(event)
+        //console.log(event)
     })
 
 
