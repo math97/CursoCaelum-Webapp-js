@@ -10,14 +10,26 @@
                         {conteudo:'#descubra',cor:'red'}
                     ];
 
+        const conexaoApi  =  new XMLHttpRequest();
+        conexaoApi.open('GET','http://ceep.herokuapp.com/cartoes/instrucoes');
+        conexaoApi.responseType = 'json'
+        conexaoApi.send();
+
+        conexaoApi.addEventListener('load',function(){
+            console.log(conexaoApi.response);
+
+            listaAjuda=conexaoApi.response.instrucoes
+            let cartoesAjuda = [];
+            for(const list of listaAjuda){
+                cartoesAjuda.push(criarCartao(list));
+            }
+        })
+
 /*         lista.forEach(item => {
             console.log(item);
         }); */
 
-        let cartoesAjuda = [];
-        for(const list of listaAjuda){
-            cartoesAjuda.push(criarCartao(list));
-        }
+
         
         
         
