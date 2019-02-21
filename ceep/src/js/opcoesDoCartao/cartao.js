@@ -70,7 +70,7 @@
     
         cartao.addEventListener('click', (evento) => {
             console.log(evento)
-            isTrash = evento.target.classList.contains('opcoesDoCartao-remove')
+            const isTrash = evento.target.classList.contains('opcoesDoCartao-remove')
             if (isTrash) {
                 cartao.classList.add("cartao--some");
                 cartao.addEventListener("transitionend", function () {

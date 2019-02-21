@@ -1,0 +1,33 @@
+{
+  "name": "ceep",
+  "version": "1.0.0",
+  "description": "organizador chamado de ceep aprendido no curso javascript da caelum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch":"./node_modules/.bin/babel src --out-dir dist --copy-files --watch --preset @babel/preset-env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/math97/CursoCaelum-Webapp-js.git"
+  },
+  "keywords": [
+    "organizador",
+    "notas",
+    "notes"
+  ],
+  "author": "Matheus Alves Albuquerque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/math97/CursoCaelum-Webapp-js/issues"
+  },
+  "homepage": "https://github.com/math97/CursoCaelum-Webapp-js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  }
+}
