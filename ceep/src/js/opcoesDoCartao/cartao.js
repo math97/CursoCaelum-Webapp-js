@@ -4,7 +4,7 @@
     let cartoes = document.querySelectorAll('.cartao')
     let contador = cartoes.length;
     
-    window.criarCartao = function(objetoCartao){    
+    window.criarCartao = function(objetoCartao,text){    
     
         contador++;
     
@@ -12,6 +12,9 @@
         cartao.classList.add('cartao');
         cartao.tabIndex = 0;
         cartao.id = `cartao_${contador}`;
+        if(text=='ajuda'){
+            cartao.classList.add('ajuda')
+        }
     
         cartao.style.backgroundColor = objetoCartao.cor;
     

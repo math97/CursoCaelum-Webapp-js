@@ -24,7 +24,7 @@
 
             })
         } else {
-            const cartao = criarCartao(objetoCartao);
+            const cartao = criarCartao(objetoCartao,'normal');
             form.reset();
             cartao.focus();
             

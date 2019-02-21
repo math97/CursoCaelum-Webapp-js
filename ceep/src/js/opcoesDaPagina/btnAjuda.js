@@ -20,8 +20,9 @@
 
             listaAjuda=conexaoApi.response.instrucoes
             let cartoesAjuda = [];
+            let ajuda='ajuda';
             for(const list of listaAjuda){
-                cartoesAjuda.push(criarCartao(list));
+                cartoesAjuda.push(criarCartao(list,ajuda));
             }
         })
 
